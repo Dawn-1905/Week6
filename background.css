@@ -1,0 +1,161 @@
+
+.Banner{
+    font-style: oblique;
+    font-weight: bolder;
+    color: red
+}
+.sigmar-regular {
+    font-family: "Sigmar", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h1{
+    font-family: "Sigmar", serif ;
+    background: linear-gradient(45deg, #ff0000, #1f34d7, #f333e6, #78c709);
+    background-clip: text;
+    color: transparent;
+    background-size: 400% 400%;
+    animation: gradient 6s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% { 
+        background-position: 100% ;
+    }
+    100% {
+        background-position: 0%;
+    }
+}  
+h2 {
+    font-family: "Sigmar", serif ;
+    color: #d00000;
+}
+.home h2 {
+    font-family: "Sigmar", serif;
+    font-style: oblique;
+    text-align: center;
+}
+.home h2 p {
+    font-family: "Sigmar", serif;
+    font-weight: bolder;
+    font-style: italic;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: rgb(28, 20, 20);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.active {
+    width: 320px;
+    height: 160px;
+    border-radius: 15px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateX(40px) scale(0.8);
+    animation: fadeIn 1.2s ease-in forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+/* Different gradient styles for attraction */
+.active:nth-child(1) {
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+}
+
+.active:nth-child(2) {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.active:nth-child(3) {
+    background: linear-gradient(135deg, #1e9600, #ff0000);
+}
+
+.active:nth-child(4) {
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+}
+/* Smooth Scroll Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.active::before {
+    content: "🔥";
+    font-size: 2.5rem;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.active:nth-child(2)::before {
+    content: "💡";
+}
+
+.active:nth-child(3)::before {
+    content: "🚀";
+}
+.card:nth-child(4)::before {
+    content: "🎨";
+}
+nav ul li a:hover {
+    color: red;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #d00000;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
